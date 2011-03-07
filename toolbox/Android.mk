@@ -63,6 +63,10 @@ LOCAL_SRC_FILES:= \
 	toolbox.c \
 	$(patsubst %,%.c,$(TOOLS))
 
+ifneq ($(BOARD_RECOVERY_WRITE_MISC),)
+  LOCAL_CFLAGS += -DUSE_RECOVERY_WRITE_MISC=1
+endif
+
 LOCAL_SHARED_LIBRARIES := libcutils libc
 
 LOCAL_MODULE:= toolbox
