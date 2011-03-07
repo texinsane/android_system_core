@@ -116,7 +116,8 @@ static struct perms_ devperms[] = {
     { "/dev/ttyHS0",        0600,   AID_BLUETOOTH,  AID_BLUETOOTH,  0 },
     { "/dev/uinput",        0660,   AID_SYSTEM,     AID_BLUETOOTH,  0 },
     { "/dev/alarm",         0664,   AID_SYSTEM,     AID_RADIO,      0 },
-    { "/dev/tty0",          0660,   AID_ROOT,       AID_SYSTEM,     0 },
+    { "/dev/tty0",          0666,   AID_ROOT,       AID_SYSTEM,     0 },
+    { "/dev/rtc1",          0660,   AID_SYSTEM,     AID_RADIO,      0 },
     { "/dev/graphics/",     0660,   AID_ROOT,       AID_GRAPHICS,   1 },
     { "/dev/msm_hw3dm",     0660,   AID_SYSTEM,     AID_GRAPHICS,   0 },
     { "/dev/msm_rotator",   0660,   AID_SYSTEM,     AID_GRAPHICS,   0 },
@@ -191,6 +192,13 @@ static struct perms_ devperms[] = {
     { "/dev/qmi0",          0640,   AID_RADIO,      AID_RADIO,      0 },
     { "/dev/qmi1",          0640,   AID_RADIO,      AID_RADIO,      0 },
     { "/dev/qmi2",          0640,   AID_RADIO,      AID_RADIO,      0 },
+    { "/dev/i2c-0",         0660,   AID_SYSTEM,     AID_SYSTEM,     1 },
+    { "/dev/i2c-1",         0660,   AID_ROOT,       AID_SYSTEM,   0 },
+    { "/dev/camera0",       0777,   AID_ROOT,       AID_ROOT,       0 },
+    { "/dev/mtd/mtd2",      0660,   AID_ROOT,       AID_SYSTEM,   0 },
+    { "/dev/mtd/mtd3",      0600,   AID_SYSTEM,     AID_SYSTEM,     0 },
+
+
         /* CDMA radio interface MUX */
     { "/dev/ts0710mux",     0640,   AID_RADIO,      AID_RADIO,      1 },
     { "/dev/ppp",           0660,   AID_RADIO,      AID_VPN,        0 },
